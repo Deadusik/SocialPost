@@ -1,0 +1,24 @@
+import { Route, Routes } from "react-router-dom"
+import { routes } from "./route"
+import Error from "../pages/Error"
+
+const AppRouter = () => {
+    return (
+        <>
+            <Routes>
+                {
+                    routes.map(
+                        route =>
+                            <Route
+                                path={route.path}
+                                element={route.element}
+                                errorElement={<Error />} />
+                    )
+                }
+                <Route path="*" element={<Error />} />
+            </Routes>
+        </>
+    )
+}
+
+export default AppRouter

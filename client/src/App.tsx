@@ -1,7 +1,16 @@
+import styles from './styles/App.module.scss'
+//components
+import Footbar from "./components/Footbar"
+import Navbar from "./components/Navbar"
+import AppRouter from "./router/AppRouter"
+
+
 function App() {
   return (
-    <div>
-      <h1>React App</h1>
+    <div className={styles.App}>
+      <Navbar />
+      <AppRouter />
+      <Footbar />
     </div>
   )
 }
